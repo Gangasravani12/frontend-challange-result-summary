@@ -14,56 +14,81 @@
                 <h1>76</h1>
                 <h6>of 100</h6>
             </div>
+            <div class="left-text">
             <h3>Great</h3>
-            <h6 class='para'>You scored higher than 65% of<br>the people who have taken<br>these tests.</h6>
+            <p class='para' id="description"></p>
+            </div>
         </div>
         <div class='right-container'>
             <h3 class='header'>Summary</h3>
-            <div class='box1'> 
-            <div class='left2'>
-              <img src="icon-reaction.svg"/>
-              <div class='content'>Reaction</div>
-              </div>
-              <div class='right2'>
-              <div class='content2'>80 </div>
-              <div class='marks'> / 100</div>
-              </div>
-            </div>
-            <!-- {/* reaction code in html */} -->
-            <div class='box2'> 
-            <div class='left'>
-              <img src="icon-memory.svg"/>
-              <div class='content-mem'>Memory</div>
-              </div>
-              <div class='right'>
-              <div class='content2'>92 </div>
-              <div class='marks'> / 100</div>
-              </div>
-            </div>
-            <!-- {/* reaction code in html */} -->
-            <div class='box3'> 
-            <div class='left1'>
-              <img src="icon-verbal.svg"/>
-              <div class='content-ver'>Verbal</div>
-              </div>
-              <div class='right1'>
-              <div class='content2'>61 </div>
-              <div class='marks'> / 100</div>
-              </div>
-            </div>
-            <!-- {/* reaction code in html */} -->
-            <div class='box4'> 
-            <div class='left1'>
-              <img src="icon-visual.svg"/>
-              <div class='content-vis'>Visual</div>
-              </div>
-              <div class='right1'>
-              <div class='content2'>72 </div>
-              <div class='marks'> / 100</div>
-              </div>
-            </div>
-            <button class='box5'>Continue</button>
+             <!-- This is where the dynamic boxes will be placed -->
+             <div class='dynamic-boxes'></div>
         </div>
-    </div>
+        <button class='box5'>Continue</button>
+        <script>
+            fetch('./dta.json')
+                .then(response => response.json())
+                .then(data => {
+                    // Populating the dynamic data into HTML elements
+                    document.querySelector('.box h1').textContent = data.result.score;
+                    document.querySelector('.box h6').textContent = `of ${data.result.maxScore}`;
+                    document.querySelector('.left-text h3').textContent = data.result.grade;
+                    const descriptionElement = document.getElementById('description');
+                    descriptionElement.innerHTML = data.result.description.replace(/\n/g, '<br>');
+        
+                    // Dynamically generating category boxes
+                    const dynamicBoxesContainer = document.querySelector('.dynamic-boxes');
+                    const rightContainer = document.querySelector('.right-container');
+data.categories.forEach(category => {
+    const categoryBox = document.createElement('div');
+    categoryBox.className = 'box1';
+    categoryBox.style.backgroundColor = category.background; // Set background color
+    
+    // Creating category left content
+    const categoryLeft = document.createElement('div');
+    categoryLeft.className = 'left2';
+    categoryLeft.style.color = category.color; // Apply text color to the category left element
+
+    // Creating category icon (assuming you have icons for categories)
+    const categoryIcon = document.createElement('img');
+    categoryIcon.src = `icon-${category.name.toLowerCase()}.svg`;
+
+    // Creating category name
+    const categoryName = document.createElement('div');
+    categoryName.className = 'content';
+    categoryName.textContent = category.name;
+
+    // Appending category icon and name to category left
+    categoryLeft.appendChild(categoryIcon);
+    categoryLeft.appendChild(categoryName);
+
+    // Creating category right content
+    const categoryRight = document.createElement('div');
+    categoryRight.className = 'right2';
+
+    // Creating category score
+    const categoryScore = document.createElement('div');
+    categoryScore.className = 'content2';
+    categoryScore.textContent = category.score;
+
+    // Creating category max score
+    const categoryMaxScore = document.createElement('div');
+    categoryMaxScore.className = 'marks';
+    categoryMaxScore.textContent = ` / ${category.maxScore}`;
+
+    // Appending category score and max score to category right
+    categoryRight.appendChild(categoryScore);
+    categoryRight.appendChild(categoryMaxScore);
+
+    // Appending category left and right to category box
+    categoryBox.appendChild(categoryLeft);
+    categoryBox.appendChild(categoryRight);
+    dynamicBoxesContainer.appendChild(categoryBox);
+    // Appending category box to right container
+    rightContainer.appendChild(categoryBox);
+                    });
+                })
+                .catch(error => console.error('Error loading data:', error));
+        </script>
 </body>
 </html>
