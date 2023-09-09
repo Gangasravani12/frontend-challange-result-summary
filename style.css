@@ -1,201 +1,129 @@
-body{
+body {
     padding: 0;
     background-color: whitesmoke;
 }
-.container{
+
+.container {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    margin:0  auto;
     border-collapse: 2px solid black;
     height: 430px;
     width: 700px;
-    margin: 150px auto;
+    margin-top: 127px;
     border-radius: 10px;
     box-shadow: 1px 0px 20px 2px rgb(0, 0, 0, 0.4);
-
 }
-.container1{
+
+.container1 {
     border-collapse: 2px solid collapse;
-     height: 430px;
-     width: 330px;
-     border-radius:10px;
-     background: linear-gradient(hsl(252, 67%, 60%), hsl(241, 81%, 54%));
-    }
-h4{
-    color: #fff;
-  padding: 25px;
-  text-align: center;
+    height: 430px;
+    width: 330px;
+    border-radius: 10px;
+    
+    background: linear-gradient(hsl(252, 67%, 60%), hsl(241, 81%, 54%));
 }
-h6{
-    color: #fff;
-}
-.box{
-    padding: 50px;
-  width: 74px;
-  height: 74px;
-  border-radius: 100%;
-  background: linear-gradient(180deg,hsl(252, 80%, 20%), hsl(241, 81%, 54%));
-  /* box-shadow: inset 1px 1px 12px 0px rgb(61, 24, 193); */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  margin: 0 auto;
 
+h4 {
+    color: #fff;
+    padding: 25px;
+    text-align: center;
 }
-h6{
+
+h6 {
+    color: #fff;
+}
+
+.box {
+    padding: 50px;
+    width: 74px;
+    height: 74px;
+    border-radius: 100%;
+    background: linear-gradient(hsl(241, 81%, 54%), hsl(252, 100%, 67%));
+    box-shadow: inset 1px 1px 12px 0px rgb(61, 24, 193);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+h6 {
     margin-top: -36px;
 }
-h1{
+
+h1 {
     color: whitesmoke;
     padding: 10px;
 }
-h3{
+
+h3 {
     margin-top: 15px;
     color: white;
     text-align: center;
 }
+
 .para{
+    color: white;
     margin-top: -5px;
     text-align: center;
+    font-size: 15px;
 }
-.header{
+
+.header {
     color: black;
     margin-top: -406px;
     margin-left: 130px;
 }
-/* Reaction css code */
-.box1{
-    display:flex;
-    color: red;
-    width: 260px;
-    height: 30px;
-    border-radius: 10px;
-    margin-left: 360px;
-    padding: 10px 5px;
-    background-color: rgb(228, 207, 207);
+.dynamic-boxes {
+    margin-left: 460px;
+    margin-top: -3px;
 }
-.left2{
+    .box1 {
+        display: flex;
+        margin: 10px 360px;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 10px;
+        width: 260px;
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    }
+    .right-container {
+        display: flex;
+        position : relative;
+        flex-direction: column; /* Change the flex direction to column */
+         /* Align items at the start (top) of the container */
+        padding: 20px; /* Adjust padding as needed */
+    }
+    
+.left2 {
     display: flex;
-    margin-top: 4px;
-    align-content: space-between;
-    margin-right: 4.5px;
+    align-items: center;
 }
-.right2{
-    display: flex;
-    margin-top: 4px;
-    align-content: space-between;
-    column-gap: 5px;
-    margin-left: -14px;
-}
-.content{
-    margin-right: 65px;
-    margin-left: 10px
-}
-.content2{
-    font-weight: bold;
-    color: black;
-}
-.marks{
-    color: grey;
-}
-/* ......................Memory.................... */
-.box2{
-    display:flex;
-    width: 260px;
-    height: 30px;
-    border-radius: 10px;
-    margin-left: 360px;
-    margin-top: 15px;
-    padding: 10px 5px;
-    background: hsla(39, 100%, 56%, 0.1);
-}
-.left{
-    display: flex;
-    margin-top: 4px;
-    align-content: space-between;
-    margin-right: 4.5px;
-}
-.right{
-    display: flex;
-    align-content: space-between;
-    column-gap: 5px;
-    margin-top: 4px;
-    margin-left: -8px;
-}
-.content-mem{
-    color: hsl(39, 100%, 56%);
-    margin-right: 65px;
-    margin-left: 10px
-}
-.content2{
-    font-weight: bold;
-    color: black;
-}
-.marks{
-    color: grey;
-}
-/* .........Verbal css code............... */
-.box3{
-    display:flex;
-    color: red;
-    width: 260px;
-    height: 30px;
-    border-radius: 10px;
-    margin-left: 360px;
-    margin-top: 15px;
-    padding: 10px 5px;
-    background: hsl(166, 100%, 37%, 0.1);
-}
-.left1{
-    display: flex;
-    align-content: space-between;
-    margin-top: 4px;
-    margin-right: 4.5px;
-}
-.right1{
-    display: flex;
-    align-content: space-between;
-    column-gap: 5px;
-    margin-top: 4px;
-    margin-left: 7px;
-}
-.content-ver{
-    margin-right: 65px;
-    margin-left: 10px;
-    color: hsl(166, 100%, 37%);
 
-}
-.content2{
-    font-weight: bold;
-    color: black;
-}
-.marks{
-    color: grey;
-}
-/* ..............Visual css code............... */
-.box4{
-    display:flex;
-    color: red;
-    width: 260px;
-    height: 30px;margin-top: 15px;
-    border-radius: 10px;
-    margin-left: 360px;
-    padding: 10px 5px;
-    background: hsl(234, 85%, 45%, 0.1);
-}
-.content-vis{
-    margin-right: 65px;
+.content {
     margin-left: 10px;
-    color: hsl(234, 85%, 45%);
+}
 
+.right2 {
+    display: flex;
+    align-items: center;
 }
-.content2{
+
+.content2 {
     font-weight: bold;
-    color: black;
+    margin-right: 5px;
 }
-.marks{
+
+.marks {
     color: grey;
 }
+
 .box5{
-    margin-top: 30px;
+    margin-top: 280px;
   padding: 15px 30px;
   border: none;
   color: white;
@@ -204,29 +132,34 @@ h3{
   width: 260px;
   margin-left: 365px;
   border-radius: 20px;
+  position: absolute;
+  top: 200px;
+  margin-left: 390px;
+  font-weight: bold;
 }
-@media (max-width: 760px) {
-    .left {
-      width: 100%;
-      padding: 0px;
-      border-radius: 0px;
-      border-bottom-left-radius: 20px;
-      border-bottom-right-radius: 20px;
+.box5:hover{
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+}
+@media (max-width: 708px) {
+    .container1 {
+        display: none; /* Hide the container1 */
     }
-    .right {
-      padding: 0;
-      width: 80%;
-      margin: 0 auto;
+    .right-container {
+        width: 100%;
+        visibility: visible;
+        margin: 0 auto;
     }
     .left-text {
-      padding: 20px;
-      text-align: center;
+        padding: 20px;
+        text-align: center;
     }
     .container {
-      width: 100%;
-      flex-direction: column;
-      border-radius: 0px;
-      overflow: hidden;
-      padding: 0;
+        width: 100%;
+        flex-direction: column;
+        border-radius: 0px;
+        overflow: hidden;
+        padding: 0;
     }
-  }
+}
