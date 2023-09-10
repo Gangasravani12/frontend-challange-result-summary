@@ -76,6 +76,6 @@ I'd like to acknowledge the Frontend Mentor community and the resources availabl
 
  # Links
 
- * **Solution link :**
+ * **Solution link :** https://github.com/Gangasravani12/frontend-challange-result-summary.git
 
  * **Live site Url :**  https://gangasravani12.github.io/frontend-challange-result-summary/
