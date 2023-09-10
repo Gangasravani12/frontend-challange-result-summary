@@ -144,22 +144,40 @@ h3 {
 }
 @media (max-width: 708px) {
     .container1 {
-        display: none; /* Hide the container1 */
+        display: visible;
+        margin-top: -30px;
+        width: 230px; 
+        height: 550px;/* Hide the container1 */
     }
     .right-container {
-        width: 100%;
+        width: 230px;
         visibility: visible;
-        margin: 0 auto;
+        margin-top: -50px;
     }
-    .left-text {
+    /* .left-text {
         padding: 20px;
         text-align: center;
+    } */
+    .header {
+        color: black;
+        margin-top: -495px;
+        margin-left: 250px;
+    }
+    .dynamic-boxes {
+        margin-left: 0;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: -3px;
+    }
+    .box5{
+        margin-right: -200px;
     }
     .container {
         width: 100%;
+
         flex-direction: column;
         border-radius: 0px;
-        overflow: hidden;
+        overflow-y: hidden;
         padding: 0;
     }
 }
